@@ -1,5 +1,7 @@
 
 using System;
+using Microsoft.EntityFrameworkCore;
+using Silento.Data;
 
 namespace Silento
 {
