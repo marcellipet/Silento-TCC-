@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Silento.Data;
+using Silento.Extensions;
 
 namespace Silento
 {
