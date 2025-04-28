@@ -25,8 +25,8 @@ namespace Silento.Models
         public DspDispositivo Pk_Dispositivo { get; init; }
 
         [ForeignKey(nameof(Pk_AtivacaoEstado))]
-        public long IdEstado { get; set; }
+        public int IdEstado { get; set; }
 
-        public DspDispositivo Pk_AtivacaoEstado { get; init; }
+        public AtvAtivacaoEstado Pk_AtivacaoEstado { get; init; }
     }
 }

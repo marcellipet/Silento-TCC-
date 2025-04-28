@@ -1,4 +1,5 @@
-﻿using Silento.Services.Dispositivo;
+﻿using Silento.Services.AtivacaoEstado;
+using Silento.Services.Dispositivo;
 
 namespace Silento.Extensions
 {
@@ -7,6 +8,7 @@ namespace Silento.Extensions
         public static void AddDependencyInjection(this IServiceCollection services)
         {
             services.AddTransient<IDispositivoInterface, DispositivoService>();
+            services.AddTransient<IAtivacaoEstadoInterface, AtivacaoEstadoService>();
         }
     }
 }
