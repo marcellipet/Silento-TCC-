@@ -1,5 +1,6 @@
 ﻿using Silento.Services.AtivacaoEstado;
 using Silento.Services.Dispositivo;
+using Silento.Services.Endereco;
 
 namespace Silento.Extensions
 {
@@ -9,6 +10,7 @@ namespace Silento.Extensions
         {
             services.AddTransient<IDispositivoInterface, DispositivoService>();
             services.AddTransient<IAtivacaoEstadoInterface, AtivacaoEstadoService>();
+            services.AddTransient<IEnderecoInterface, EnderecoService>();
         }
     }
 }
