@@ -1,13 +1,12 @@
-﻿# Silento
 
-Projeto de Conclusão de Curso Do 3° módulo do curso Técnico de Desenvolvimento de Sistemas da escola ETEC Comendador Jõao Rays.
+## Projeto de Conclusão de Curso Do 3° módulo do curso Técnico de Desenvolvimento de Sistemas da escola ETEC Comendador Jõao Rays.
 
 Course Conclusion Project From the 3rd module of the Systems Development Technician course at the ETEC Comendador Jõao Rays school.
 
 
-## Descrição
+### Descrição
 
-O projeto "SILENTO" visa o combate à poluição sonora por meio de um dispositivo baseado em Arduino, o qual será instalado em postes e utilizará sensores para detectar ondas sonoras.
+## O projeto "SILENTO" visa o combate à poluição sonora por meio de um dispositivo baseado em Arduino, o qual será instalado em postes e utilizará sensores para detectar ondas sonoras.
 Quando o nível de decibéis ultrapassar os limites estabelecidos por lei em horários e locais determinados o dispositivo acionará as autoridades competentes para que providências sejam tomadas. 
 A escolha do nome "SILENTO", que significa "silêncio" em italiano, reflete diretamente o objetivo de criar ambientes mais agradáveis e tranquilos para a convivência humana e animal. 
 O logotipo do projeto, que traz a imagem de um gato, simboliza o conforto e a busca por tranquilidade, associando-se à ideia de um ambiente mais sereno, especialmente para os animais noturnos. 
@@ -23,9 +22,8 @@ The color teal was chosen because it conveys serenity and sophistication, accord
 The development of the project arose from research into environmental and social issues, with an emphasis on growing noise pollution, a problem faced in many parts of the world and experienced by the team members themselves.
 This work aims to offer an innovative and practical solution to a contemporary problem, promoting well-being and quality of life.
 
-## API
 
-A API é para guardar e enviar dados para o banco de dados que está integrado com a API e podem ser usados em conjuntos com a programação do Arduino.
+## A API é para guardar e enviar dados para o banco de dados que está integrado com a API e podem ser usados em conjuntos com a programação do Arduino.
 Para registrar os horários, decibéis e a localidade dos ruídos, podendo assim servir como referência para comunidades e autoridades de como o local pode estar poluído com a grande quantidade de ruídos.
 
 The API is for storing and sending data to the database that is integrated with the API and can be used in conjunction with Arduino programming.
