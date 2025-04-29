@@ -1,4 +1,8 @@
-﻿using Silento.Data;
+﻿using LojaProdutosV2.Models.RequestResponse;
+using Microsoft.EntityFrameworkCore;
+using Silento.Data;
+using Silento.Dto;
+using Silento.Models;
 
 namespace Silento.Services.DispositivoAtivacao
 {
@@ -10,5 +14,54 @@ namespace Silento.Services.DispositivoAtivacao
             context = context;
         }
 
+        public Task<ResponseModel<List<DspDispositivoAtivacao>>> AtualizarAtivacao(DispositivoAtivacaoAtualizarDto dispositivoAtivacaoAtualizarDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ResponseModel<List<DspDispositivoAtivacao>>> BuscarPorAtivacao(long idAtivacao)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ResponseModel<List<DspDispositivoAtivacao>>> BuscarPorDispositivo(long idDispositivo)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ResponseModel<DspDispositivoAtivacao>> BuscarPorId(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ResponseModel<bool>> Deletar(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<ResponseModel<List<DspDispositivoAtivacao>>> ListarTodos()
+        {
+            ResponseModel<List<DspDispositivoAtivacao>> resposta = new ResponseModel<List<DspDispositivoAtivacao>>();
+            try
+            {
+                var dispositivosAtivacao = await context.DspDispositivoAtivacao.ToListAsync();
+
+                if (dispositivosAtivacao == null || dispositivosAtivacao.Count == 0)
+                {
+                    resposta.Status = false;
+                    resposta.Mensagem = "Nenhum dispositivo encontrado.";
+                    return resposta;
+                }
+                resposta.Dados = dispositivosAtivacao;
+                resposta.Status = true;
+                resposta.Mensagem = "Dispositivos encontrados com sucesso.";
+            }
+            catch (Exception ex)
+            {
+                resposta.Status = false;
+                resposta.Mensagem = $"Erro ao buscar dispositivos: {ex.Message}";
+            }
+            return resposta;
+        }
     }
 }
