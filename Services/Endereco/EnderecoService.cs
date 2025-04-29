@@ -89,6 +89,7 @@ namespace Silento.Services.Endereco
         //{
         //    throw new NotImplementedException();
         //}
+
         public async Task<ResponseModel<bool>> Deletar(long id)
         {
             ResponseModel<bool> resposta = new ResponseModel<bool>();

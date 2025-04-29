@@ -9,6 +9,6 @@ namespace Silento.Services.AtivacaoEstado
         public Task<ResponseModel<List<AtvAtivacaoEstado>>> BuscarTodos();
         public Task<ResponseModel<List<AtvAtivacaoEstado>>> AtualizarEstado(AtivacaoAtualizarDto ativacaoAtualizarDto);
         public Task<ResponseModel<AtvAtivacaoEstado>> CriarEstado(AtvAtivacaoEstado ativacaoEstado);
-        //public Task<ResponseModel<List<AtvAtivacaoEstado>>> BuscarDispPorAtivacao(Guid idDispositivo);
+        //public Task<ResponseModel<List<AtvAtivacaoEstado>>> BuscarDispPorAtivacao(Guid idDispositivo); tenho que adicionar no banco ainda
     }
 }

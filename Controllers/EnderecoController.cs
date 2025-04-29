@@ -20,14 +20,14 @@ namespace Silento.Controllers
             return resposta;
         }
 
-        [HttpGet("BuscarPorId")]
+        [HttpGet("{id}/BuscarPorId")]
         public async Task<ResponseModel<EndEndereco>> BuscarPorId(long id)
         {
             var resposta = await enderecoInterface.BuscarPorId(id);
             return resposta;
         }
 
-        [HttpGet("BuscarDispPorEnde")]
+        [HttpGet("{idEndereco}/BuscarDispPorEnde")]
         public async Task<ResponseModel<List<EndEndereco>>> BuscarDispPorEnde(long idDispositivo)
         {
             var resposta = await enderecoInterface.BuscarDispPorEnde(idDispositivo);

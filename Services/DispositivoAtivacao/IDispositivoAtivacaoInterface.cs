@@ -10,7 +10,7 @@ namespace Silento.Services.DispositivoAtivacao
         Task<ResponseModel<DspDispositivoAtivacao>> BuscarPorId(long id);
         Task<ResponseModel<List<DspDispositivoAtivacao>>> BuscarPorAtivacao(long idAtivacao);
         Task<ResponseModel<List<DspDispositivoAtivacao>>> BuscarPorDispositivo(long idDispositivo);
-        Task<ResponseModel<List<DspDispositivoAtivacao>>> AtualizarAtivacao(DispositivoAtivacaoAtualizarDto dispositivoAtivacaoAtualizarDto);
+        //Task<ResponseModel<List<DspDispositivoAtivacao>>> AtualizarAtivacao(DispositivoAtivacaoAtualizarDto dispositivoAtivacaoAtualizarDto); // tenho que ver como fazer ainda
         Task<ResponseModel<bool>> Deletar(long id);
     }
 }

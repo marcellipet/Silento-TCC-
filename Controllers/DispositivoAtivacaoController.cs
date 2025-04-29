@@ -19,5 +19,28 @@ namespace Silento.Controllers
             var resposta = await dispositivoAtivacaoInterface.ListarTodos();
             return resposta;
         }
+
+        [HttpGet("{id}BuscarPorId")]
+        public async Task<ResponseModel<DspDispositivoAtivacao>> BuscarPorId(long id)
+        {
+            var resposta = await dispositivoAtivacaoInterface.BuscarPorId(id);
+            return resposta;
+        }
+
+        [HttpGet("{id}BuscarPorAtivacao")]
+        public async Task<ResponseModel<List<DspDispositivoAtivacao>>> BuscarPorAtivacao(long idAtivacao)
+        {
+            var resposta = await dispositivoAtivacaoInterface.BuscarPorAtivacao(idAtivacao);
+            return resposta;
+        }
+
+        [HttpGet("{id}BuscarPorDispositivo")]
+        public async Task<ResponseModel<List<DspDispositivoAtivacao>>> BuscarPorDispositivo(long idDispositivo)
+        {
+            var resposta = await dispositivoAtivacaoInterface.BuscarPorDispositivo(idDispositivo);
+            return resposta;
+        }
+
+        //[HttpPut("AtualizarAtivacao")]
     }
 }
