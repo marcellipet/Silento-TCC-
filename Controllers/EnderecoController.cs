@@ -1,12 +1,51 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LojaProdutosV2.Models.RequestResponse;
+using Microsoft.AspNetCore.Mvc;
+using Silento.Models;
+using Silento.Services.Endereco;
 
 namespace Silento.Controllers
 {
-    public class EnderecoController : Controller
+    public class EnderecoController : ControllerBase
     {
-        public IActionResult Index()
+        private readonly IEnderecoInterface enderecoInterface;
+        public EnderecoController(IEnderecoInterface enderecoInterface)
         {
-            return View();
+            this.enderecoInterface = enderecoInterface;
+        }
+
+        [HttpGet("ListarTodos")]
+        public async Task<ResponseModel<List<EndEndereco>>> ListarTodos()
+        {
+            var resposta = await enderecoInterface.ListarTodos();
+            return resposta;
+        }
+
+        [HttpGet("BuscarPorId")]
+        public async Task<ResponseModel<EndEndereco>> BuscarPorId(long id)
+        {
+            var resposta = await enderecoInterface.BuscarPorId(id);
+            return resposta;
+        }
+
+        [HttpGet("BuscarDispPorEnde")]
+        public async Task<ResponseModel<List<EndEndereco>>> BuscarDispPorEnde(long idDispositivo)
+        {
+            var resposta = await enderecoInterface.BuscarDispPorEnde(idDispositivo);
+            return resposta;
+        }
+
+        [HttpGet("BuscarEnderecoPorEstado")]
+        public async Task<ResponseModel<List<EndEndereco>>> BuscarEnderecoPorEstado(char Estado)
+        {
+            var resposta = await enderecoInterface.BuscarEnderecoPorEstado(Estado);
+            return resposta;
+        }
+
+        [HttpDelete("Deletar")]
+        public async Task<ResponseModel<bool>> Deletar(long id)
+        {
+            var resposta = await enderecoInterface.Deletar(id);
+            return resposta;
         }
     }
 }

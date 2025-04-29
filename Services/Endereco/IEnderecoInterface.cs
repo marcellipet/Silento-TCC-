@@ -7,7 +7,9 @@ namespace Silento.Services.Endereco
     {
         Task<ResponseModel<List<EndEndereco>>> ListarTodos();
         Task<ResponseModel<EndEndereco>> BuscarPorId(long id);
-        Task<ResponseModel<EndEndereco>> BuscarDispPorEnde(long idDispositivo);
+        Task<ResponseModel<List<EndEndereco>>> BuscarDispPorEnde(long idDispositivo);
+        Task<ResponseModel<List<EndEndereco>>> BuscarEnderecoPorEstado(char Estado);
+        //Task<ResponseModel<EndEndereco>> Criar(EndEndereco endereco);
         Task<ResponseModel<bool>> Deletar(long id);
     }
 }
