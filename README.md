@@ -1,6 +1,7 @@
 ﻿# Silento
 
 Projeto de Conclusão de Curso Do 3° módulo do curso Técnico de Desenvolvimento de Sistemas da escola ETEC Comendador Jõao Rays.
+
 Course Conclusion Project From the 3rd module of the Systems Development Technician course at the ETEC Comendador Jõao Rays school.
 
 
@@ -26,5 +27,6 @@ This work aims to offer an innovative and practical solution to a contemporary p
 
 A API é para guardar e enviar dados para o banco de dados que está integrado com a API e podem ser usados em conjuntos com a programação do Arduino.
 Para registrar os horários, decibéis e a localidade dos ruídos, podendo assim servir como referência para comunidades e autoridades de como o local pode estar poluído com a grande quantidade de ruídos.
+
 The API is for storing and sending data to the database that is integrated with the API and can be used in conjunction with Arduino programming.
 To record the times, decibels and location of noises, thus being able to serve as a reference for communities and authorities on how the place may be polluted with the large amount of noise.
